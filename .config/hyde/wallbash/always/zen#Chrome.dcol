@@ -1,5 +1,4 @@
-$HOME/.zen/PROFILE NAME\ \(release\)/chrome/userChrome.css
-/* EDIT THIS FIRST LINE TO LINK TO THE CORRECT PLACE!!! */
+path
 @media (prefers-color-scheme: dark) {
 
   :root {
