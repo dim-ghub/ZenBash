@@ -3,14 +3,18 @@
 release_folder=$(find ~/.zen -maxdepth 1 -type d -name "*(*release*)*" | head -n 1)
 
 if [[ -z "$release_folder" ]]; then
-  echo "No folder containing (release) found in ~/.zen"
+  release_folder=$(find ~/.zen -maxdepth 1 -type d -name "*(*alpha*)*" | head -n 1)
+fi
+
+if [[ -z "$release_folder" ]]; then
+  echo "No folder containing (release) or (alpha) found in ~/.zen"
   exit 1
 fi
 
 chrome_folder="$release_folder/chrome"
 mkdir -p "$chrome_folder"
 
-escaped_path=$(echo "$chrome_folder" | sed 's/ /\\ /g; s/(/\\(/g; s/)/\\)/g')
+escaped_path=$(echo "$chrome_folder" | sed 's/ /\\ /g; s/(/\/g; s/)/\/g')
 
 content_file="$HOME/.config/hyde/wallbash/always/zen#Content.dcol"
 content_line="${escaped_path}/userContent.css"
