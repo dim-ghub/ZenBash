@@ -1,8 +1,6 @@
 #!/bin/bash
 
 release_folder=$(find ~/.zen -maxdepth 1 -type d -name "*(*release*)*" | head -n 1)
-
-# Fallback to (alpha) if (release) is not found
 if [[ -z "$release_folder" ]]; then
   release_folder=$(find ~/.zen -maxdepth 1 -type d -name "*(*alpha*)*" | head -n 1)
   if [[ -z "$release_folder" ]]; then
@@ -14,19 +12,39 @@ fi
 chrome_folder="$release_folder/chrome"
 mkdir -p "$chrome_folder"
 
-# Use single quotes around the path
-quoted_path="'${chrome_folder}'"
-
+content_line="'${chrome_folder}/userContent.css'"
 content_file="$HOME/.config/hyde/wallbash/always/zen#Content.dcol"
-content_line="${quoted_path}/userContent.css"
 tmp_file=$(mktemp)
-echo "$content_line" > "$tmp_file"
-[[ -f "$content_file" ]] && cat "$content_file" >> "$tmp_file"
-mv "$tmp_file" "$content_file"
 
+if [[ -f "$content_file" ]]; then
+  read -r first_line < "$content_file"
+  if [[ "$first_line" != *"@media {"* ]]; then
+    tail -n +2 "$content_file" > "$tmp_file"
+  else
+    cp "$content_file" "$tmp_file"
+  fi
+fi
+
+echo "$content_line" > "$content_file"
+cat "$tmp_file" >> "$content_file"
+rm "$tmp_file"
+
+chrome_line="'${chrome_folder}/userChrome.css'"
 chrome_file="$HOME/.config/hyde/wallbash/always/zen#Chrome.dcol"
-chrome_line="${quoted_path}/userChrome.css"
 tmp_file=$(mktemp)
-echo "$chrome_line" > "$tmp_file"
-[[ -f "$chrome_file" ]] && cat "$chrome_file" >> "$tmp_file"
-mv "$tmp_file" "$chrome_file"
+
+if [[ -f "$chrome_file" ]]; then
+  read -r first_line < "$chrome_file"
+  if [[ "$first_line" != *"@media {"* ]]; then
+    tail -n +2 "$chrome_file" > "$tmp_file"
+  else
+    cp "$chrome_file" "$tmp_file"
+  fi
+fi
+
+echo "$chrome_line" > "$chrome_file"
+cat "$tmp_file" >> "$chrome_file"
+rm "$tmp_file"
+
+color.set.sh --single ~/.config/hyde/wallbash/always/zen\#Chrome.dcol
+color.set.sh --single ~/.config/hyde/wallbash/always/zen\#Content.dcol
