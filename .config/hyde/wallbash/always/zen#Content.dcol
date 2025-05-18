@@ -1,4 +1,5 @@
-@media (prefers-color-scheme: dark) {
+/home/dim/.zen/7u0t5f4u.Default\ \(release\)/chrome/userContent.css
+@media {
 
   /* Common variables affecting all pages */
   @-moz-document url-prefix("about:") {
@@ -7,7 +8,7 @@
       --color-accent-primary: #<wallbash_1xa5> !important;
       --color-accent-primary-hover: rgb(<wallbash_pry2_rgb>) !important;
       --color-accent-primary-active: rgb(<wallbash_2xa2>) !important;
-      background-color: #<wallbash_pry1> !important;
+      --background-color: #<wallbash_pry1> !important;
       --in-content-page-background: #<wallbash_pry1> !important;
     }
 
