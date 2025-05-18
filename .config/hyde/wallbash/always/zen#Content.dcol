@@ -1,4 +1,3 @@
-/home/dim/.zen/7u0t5f4u.Default\ \(release\)/chrome/userContent.css
 @media {
 
   /* Common variables affecting all pages */
@@ -7,7 +6,7 @@
       --in-content-page-color: #<wallbash_txt1> !important;
       --color-accent-primary: #<wallbash_1xa5> !important;
       --color-accent-primary-hover: rgb(<wallbash_pry2_rgb>) !important;
-      --color-accent-primary-active: rgb(<wallbash_2xa2>) !important;
+      --color-accent-primary-active: rgb(<wallbash_2xa2_rgb>) !important;
       --background-color: #<wallbash_pry1> !important;
       --in-content-page-background: #<wallbash_pry1> !important;
     }
@@ -65,7 +64,7 @@
       --zen-colors-tertiary: #<wallbash_pry1> !important;
       --in-content-text-color: #<wallbash_txt1> !important;
       --link-color: #<wallbash_1xa5> !important;
-      --link-color-hover: rgb(<wallbash_1xa7>) !important;
+      --link-color-hover: rgb(<wallbash_1xa7_rgb>) !important;
       --zen-colors-primary: #<wallbash_pry2> !important;
       --in-content-box-background: #<wallbash_pry2> !important;
       --zen-primary-color: #<wallbash_1xa5> !important;
