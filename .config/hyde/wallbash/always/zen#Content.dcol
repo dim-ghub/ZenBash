@@ -7,7 +7,7 @@
       --color-accent-primary: #<wallbash_1xa5> !important;
       --color-accent-primary-hover: rgb(<wallbash_pry2_rgb>) !important;
       --color-accent-primary-active: rgb(<wallbash_2xa2_rgb>) !important;
-      --background-color: #<wallbash_pry1> !important;
+      --background-color: #<wallbash_1xa5> !important;
       --in-content-page-background: #<wallbash_pry1> !important;
     }
 
