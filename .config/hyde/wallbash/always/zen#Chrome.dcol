@@ -1,3 +1,4 @@
+'/home/dim/.zen/7u0t5f4u.Default (release)/chrome/userChrome.css'|/home/dim/.config/hyde/wallbash/scripts/ZenBash.sh -r
 @media {
 
   :root {
@@ -42,7 +43,7 @@
   }
 
   #urlbar-background {
-    background-color: #<wallbash_pry1> !important;
+    background-color: #<wallbash_pry2> !important;
   }
 
   .content-shortcuts {
