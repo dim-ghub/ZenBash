@@ -56,9 +56,6 @@ echo "$chrome_line" > "$chrome_file"
 cat "$tmp_file" >> "$chrome_file"
 rm "$tmp_file"
 
-color.set.sh --single ~/.config/hyde/wallbash/always/zen\#Chrome.dcol
-color.set.sh --single ~/.config/hyde/wallbash/always/zen\#Content.dcol
-
 if $run_browser && pgrep -x zen-bin > /dev/null; then
   zen_id=$(hyprctl clients -j | jq -r '.[] | select(.class == "zen") | .address' | head -n 1)
   workspace=$(hyprctl clients -j | jq -r --arg addr "$zen_id" '.[] | select(.address == $addr) | .workspace.id')
