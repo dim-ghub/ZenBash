@@ -1,9 +1,9 @@
 '/home/dim/.zen/rh6ma2vz.Default (release)/chrome/ZenBash/zenbashChrome.css'|/home/dim/.config/hyde/wallbash/scripts/ZenBash.sh -r
 @media {
   :root {
-    --zen-colors-primary: #<wallbash_pry2> !important;
+    --zen-colors-primary: #<wallbash_pry2>d6 !important;
     --zen-primary-color: #<wallbash_1xa5> !important;
-    --zen-colors-secondary: #<wallbash_pry2> !important;
+    --zen-colors-secondary: #<wallbash_pry2>d6 !important;
     --zen-colors-tertiary: #<wallbash_pry1>d6 !important;
     --zen-colors-border: #<wallbash_1xa5> !important;
     --toolbarbutton-icon-fill: #<wallbash_1xa5> !important;
@@ -18,7 +18,7 @@
     --sidebar-text-color: #<wallbash_txt1> !important;
     --lwt-sidebar-text-color: #<wallbash_txt1> !important;
     --lwt-sidebar-background-color: #<wallbash_pry1>d6 !important;
-    --toolbar-bgcolor: #<wallbash_pry2> !important;
+    --toolbar-bgcolor: #<wallbash_pry2>d6 !important;
     --newtab-background-color: #<wallbash_pry1>d6 !important;
     --zen-themed-toolbar-bg: #<wallbash_pry1>d6 !important;
     --zen-main-browser-background: #<wallbash_pry1>d6 !important;
@@ -37,11 +37,11 @@
   }
 
   #TabsToolbar {
-    background-color: #<wallbash_pry1>d6 !important;
+    background-color: #<wallbash_pry1>00 !important;
   }
 
   #urlbar-background {
-    background-color: #<wallbash_pry2> !important;
+    background-color: #<wallbash_pry2>d6 !important;
   }
 
   .content-shortcuts {
