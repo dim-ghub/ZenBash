@@ -94,40 +94,27 @@ if ! $run_browser; then
 fi
 
 if $run_browser; then
-  if pgrep -x zen-bin > /dev/null; then
-    (
-      set -euo pipefail
-      echo "[ZenBash] Restarting zen-browser..."
+  # Detect existing Zen window
+  zen_id=$(hyprctl clients -j | jq -r '.[] | select(.class | test("zen")) | .address' | head -n1)
+  workspace=""
+  if [[ -n "$zen_id" ]]; then
+    workspace=$(hyprctl clients -j | jq -r --arg addr "$zen_id" '.[] | select(.address == $addr) | .workspace.id')
 
-      zen_id=$(hyprctl clients -j | jq -r '.[] | select(.class == "zen") | .address' | head -n1)
-      workspace=$(hyprctl clients -j | jq -r --arg addr "$zen_id" '.[] | select(.address == $addr) | .workspace.id')
+    echo "[ZenBash] Restarting zen-browser..."
 
-      pkill zen-bin
-      zen-browser & disown
+    pkill -f '[z]en'
+    zen-browser & disown
 
-      for _ in {1..10}; do
-        sleep 0.5
-        new_zen=$(hyprctl clients -j | jq -r '.[] | select(.class == "zen") | .address' | head -n1)
-        [[ -n "$new_zen" ]] && break
-      done
+    for _ in {1..10}; do
+      sleep 0.5
+      new_zen=$(hyprctl clients -j | jq -r '.[] | select(.class | test("zen")) | .address' | head -n1)
+      [[ -n "$new_zen" ]] && break
+    done
 
-      if [[ -n "$new_zen" && -n "$workspace" ]]; then
-        hyprctl dispatch movetoworkspacesilent "$workspace,address:$new_zen"
-      fi
-    ) || echo "[ZenBash] ERROR: Failed to restart zen-browser"
-  else
-    echo "[ZenBash] zen-bin not running, checking for other zen processes..."
-
-    zen_pids=$(pgrep -f zen || true)
-
-    if [[ -n "$zen_pids" ]]; then
-      echo "[ZenBash] Killing other zen-related processes: $zen_pids"
-      kill $zen_pids
-      sleep 1
-      echo "[ZenBash] Starting zen-browser..."
-      zen-browser & disown
-    else
-      echo "[ZenBash] No zen processes found, not starting zen-browser."
+    if [[ -n "$new_zen" && -n "$workspace" ]]; then
+      hyprctl dispatch movetoworkspacesilent "$workspace,address:$new_zen"
     fi
+  else
+    echo "[ZenBash] No existing Zen window found — skipping restart."
   fi
 fi
