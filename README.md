@@ -14,3 +14,7 @@ run `color.set.sh --single ~/.config/hyde/wallbash/always/zen\#Chrome.dcol ; col
 Then, to make transparency work correctly, install the Zen Zero mod:
 
 https://www.sameerasw.com/zen
+
+For the home page from the screenshot, open `about:config` and search `zen.urlbar.replace-newtab`.
+
+Change it to false.
