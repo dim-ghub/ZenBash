@@ -1,4 +1,5 @@
-'/home/dim/.zen/rh6ma2vz.Default (release)/chrome/ZenBash/zenbashChrome.css'|/home/dim/.config/hyde/wallbash/scripts/ZenBash.sh -r
+'/home/dim/.zen/3515pk9s.Default (release)/chrome/ZenBash/zenbashChrome.css'|/home/dim/.config/hyde/wallbash/scripts/ZenBash.sh -r
+
 @media {
   :root {
     --zen-colors-primary: #<wallbash_pry2>d6 !important;
@@ -23,6 +24,7 @@
     --zen-themed-toolbar-bg: #<wallbash_pry1>d6 !important;
     --zen-main-browser-background: #<wallbash_pry1>d6 !important;
     --toolbox-bgcolor-inactive: #<wallbash_pry1>d6 !important;
+  }
 
   #permissions-granted-icon{
     color: #<wallbash_pry1>d6 !important;
@@ -40,7 +42,7 @@
     background-color: #<wallbash_pry1>00 !important;
   }
 
-  #urlbar-background {
+  .urlbar-background {
     background-color: #<wallbash_pry2>d6 !important;
   }
 
@@ -57,9 +59,22 @@
     background: #<wallbash_pry1>d6 !important;
   }
 
+  #zen-media-controls-toolbar {
+    & #zen-media-progress-bar {
+      &::-moz-range-track {
+        background: #<wallbash_pry2>d6 !important;
+      }
+    }
+  }
+
   toolbar .toolbarbutton-1 {
     &:not([disabled]) {
-      &:is([open], [checked]) > :is(.toolbarbutton-icon, .toolbarbutton-text, .toolbarbutton-badge-stack){
+      &:is([open], [checked])
+        > :is(
+          .toolbarbutton-icon,
+          .toolbarbutton-text,
+          .toolbarbutton-badge-stack
+        ) {
         fill: #<wallbash_pry1>d6;
       }
     }
@@ -103,5 +118,13 @@
   .identity-color-purple {
     --identity-tab-color: #cba6f7 !important;
     --identity-icon-color: #cba6f7 !important;
+  }
+
+  hbox#titlebar {
+    background-color: #<wallbash_pry2>d6 !important;
+  }
+
+  #zen-appcontent-navbar-container {
+    background-color: #<wallbash_pry1>d6 !important;
   }
 }
