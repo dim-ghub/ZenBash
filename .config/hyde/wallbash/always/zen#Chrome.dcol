@@ -2,10 +2,10 @@
 
 @media {
   :root {
-    --zen-colors-primary: #<wallbash_pry2>d6 !important;
+    --zen-colors-primary: #<wallbash_pry2>95 !important;
     --zen-primary-color: #<wallbash_1xa5> !important;
-    --zen-colors-secondary: #<wallbash_pry2>d6 !important;
-    --zen-colors-tertiary: #<wallbash_pry1>d6 !important;
+    --zen-colors-secondary: #<wallbash_pry2>95 !important;
+    --zen-colors-tertiary: #<wallbash_pry1>95 !important;
     --zen-colors-border: #<wallbash_1xa5> !important;
     --toolbarbutton-icon-fill: #<wallbash_1xa5> !important;
     --lwt-text-color: #<wallbash_txt1> !important;
@@ -15,27 +15,27 @@
     --toolbar-color: #<wallbash_txt1> !important;
     --newtab-text-primary-color: #<wallbash_txt1> !important;
     --arrowpanel-color: #<wallbash_txt1> !important;
-    --arrowpanel-background: #<wallbash_pry1>d6 !important;
+    --arrowpanel-background: #<wallbash_pry1>95 !important;
     --sidebar-text-color: #<wallbash_txt1> !important;
     --lwt-sidebar-text-color: #<wallbash_txt1> !important;
-    --lwt-sidebar-background-color: #<wallbash_pry1>d6 !important;
-    --toolbar-bgcolor: #<wallbash_pry2>d6 !important;
-    --newtab-background-color: #<wallbash_pry1>d6 !important;
-    --zen-themed-toolbar-bg: #<wallbash_pry1>d6 !important;
-    --zen-main-browser-background: #<wallbash_pry1>d6 !important;
-    --toolbox-bgcolor-inactive: #<wallbash_pry1>d6 !important;
+    --lwt-sidebar-background-color: #<wallbash_pry1>95 !important;
+    --toolbar-bgcolor: #<wallbash_pry2>95 !important;
+    --newtab-background-color: #<wallbash_pry1>95 !important;
+    --zen-themed-toolbar-bg: #<wallbash_pry1>95 !important;
+    --zen-main-browser-background: #<wallbash_pry1>95 !important;
+    --toolbox-bgcolor-inactive: #<wallbash_pry1>95 !important;
   }
 
   #permissions-granted-icon{
-    color: #<wallbash_pry1>d6 !important;
+    color: #<wallbash_pry1>95 !important;
   }
 
   .sidebar-placesTree {
-    background-color: #<wallbash_pry1>d6 !important;
+    background-color: #<wallbash_pry1>95 !important;
   }
 
   #zen-workspaces-button {
-    background-color: #<wallbash_pry1>d6 !important;
+    background-color: #<wallbash_pry1>95 !important;
   }
 
   #TabsToolbar {
@@ -43,11 +43,11 @@
   }
 
   .urlbar-background {
-    background-color: #<wallbash_pry2>d6 !important;
+    background-color: #<wallbash_pry2>95 !important;
   }
 
   .content-shortcuts {
-    background-color: #<wallbash_pry1>d6 !important;
+    background-color: #<wallbash_pry1>95 !important;
     border-color: #<wallbash_1xa5> !important;
   }
 
@@ -56,13 +56,13 @@
   }
 
   #zenEditBookmarkPanelFaviconContainer {
-    background: #<wallbash_pry1>d6 !important;
+    background: #<wallbash_pry1>95 !important;
   }
 
   #zen-media-controls-toolbar {
     & #zen-media-progress-bar {
       &::-moz-range-track {
-        background: #<wallbash_pry2>d6 !important;
+        background: #<wallbash_pry2>95 !important;
       }
     }
   }
@@ -75,7 +75,7 @@
           .toolbarbutton-text,
           .toolbarbutton-badge-stack
         ) {
-        fill: #<wallbash_pry1>d6;
+        fill: #<wallbash_pry1>95;
       }
     }
   }
@@ -121,10 +121,10 @@
   }
 
   hbox#titlebar {
-    background-color: #<wallbash_pry2>d6 !important;
+    background-color: #<wallbash_pry2>95 !important;
   }
 
   #zen-appcontent-navbar-container {
-    background-color: #<wallbash_pry1>d6 !important;
+    background-color: #<wallbash_pry1>95 !important;
   }
 }
